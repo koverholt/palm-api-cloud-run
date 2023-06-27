@@ -1,2 +1,5 @@
-# palm-api-cloud-run
-Deploy a PaLM API wrapper on Cloud Run for use with Dialogflow CX webhooks
+## PaLM API in Cloud Run
+
+```
+gcloud run deploy palm-api --source . --allow-unauthenticated --region us-central1
+```

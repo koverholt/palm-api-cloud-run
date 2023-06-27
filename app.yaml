@@ -1,0 +1,10 @@
+service: palm-api
+
+runtime: python311
+entrypoint: gunicorn --bind :$PORT app:app
+
+instance_class: F2
+
+handlers:
+- url: /.*
+  script: auto
