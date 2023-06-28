@@ -26,7 +26,7 @@ def home():
             "top_k": 40,
         }
         model = TextGenerationModel.from_pretrained("text-bison@001")
-        response = model.predict(prompt, **parameters)
+        response = model.predict("Please answer the following question or comment in two sentences or less. Be concise: " + prompt, **parameters)
 
         result = {"content": response.text}
         return json.dumps(result)
